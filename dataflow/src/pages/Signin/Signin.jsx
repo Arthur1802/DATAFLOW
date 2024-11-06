@@ -2,7 +2,7 @@ import React from 'react'
 
 const Signin = () => {
     return (
-        <div className = "signin-container" data-aos = "fade-up">
+        <div className = "signin-container container" data-aos = "fade-up">
            <div className = "form-floating">
                 <input type = "text" className = "form-control" id = "floatingName" placeholder = "John" />
                 <label data-bs-toggle = "tooltip" data-bs-title = "You can insert either only the first name or both first and last names" htmlFor = "floatingName">Name</label>

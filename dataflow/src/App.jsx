@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
-import Signin from './pages/Signin/Signin'
+import AppRoutes from './AppRoutes'
 
 const App = () => {
     return (
-        <div className = "app-container">
+        <div className = "app-container container">
             <Navbar />
-            <Signin />
+            <AppRoutes />
         </div>
     )
 }
