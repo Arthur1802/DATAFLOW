@@ -1,0 +1,109 @@
+.sidebar-wrapper {
+    display: flex;
+    max-width: 250px;
+}
+
+#sidebar {
+    /* position: absolute; */
+    display: flex;
+    width: 70px;
+    min-width: 70px;
+    min-height: 100dvh;
+    z-index: 1000;
+    transition: all 0.25s ease;
+    flex-direction: column;
+    background: var(--sideabr-bg-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+#sidebar.expand {
+    width: 250px;
+    min-width: 250px;
+}
+
+#toggle-btn-container {
+    padding: 1rem 1.25rem;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--sidebar-text-color);
+}
+
+#sidebar ul {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+.sidebar-item {
+    list-style: none;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    padding: .625rem 1.625rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    border-left: 3px solid transparent;
+    color: var(--sidebar-text-color);
+    transition: all 0.25s ease;
+}
+
+.sidebar-link:hover {
+    background: rgba(0, 0, 0, 0.1);
+    border-left: 3px solid var(--sidebar-text-color);
+}
+
+.sidebar-link svg {
+    width: max-content;
+    font-size: 1.1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-logo,
+.sidebar-link span {
+    transition: all 0.25s ease;
+}
+
+
+@media (min-width: 768px) {
+    #sidebar:not(.expand) .sidebar-logo,
+    #sidebar:not(.expand) .sidebar-link span {
+        opacity: 0;
+        width: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .toggle-btn-container {
+        position: absolute;
+        z-index: 2000;
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem 1.25rem;
+    }
+
+    #sidebar {
+        position: absolute;
+        transform: translateX(-100%);
+        width: 100dvw;
+        min-width: 100dvw;
+        height: 100dvh;
+        z-index: 1000;
+        padding: 1rem 5rem;
+        transition: all 0.25s ease;
+    }
+
+    #sidebar.show {
+        transform: translateX(0);
+    }
+}
