@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import './HamburgerMenuButton.css'
 
-const HamburgerMenuButton = ({ id, onClick }) => {
+const HamburgerMenuButton = ({ className, id, onClick }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleMenu = () => {
@@ -9,7 +9,7 @@ const HamburgerMenuButton = ({ id, onClick }) => {
     }
 
     return (
-        <button id = {id} className = {`nav-menu-btn ${isOpen ? 'open' : ''}`} onClick = {() => { toggleMenu(); onClick() }}>
+        <button id = {id} className = {`${className} nav-menu-btn ${isOpen ? 'open' : ''}`} onClick = {() => { toggleMenu(); onClick() }}>
             <svg id = 'menu-btn' viewBox = '0 0 100 100' fill = 'none' xmlns = 'http://www.w3.org/2000/svg'>
                 <rect id = 'icon-bg' width = '100' height = '100'/>
                 <g id = 'Frame 1'>
@@ -26,6 +26,7 @@ const HamburgerMenuButton = ({ id, onClick }) => {
 import PropTypes from 'prop-types'
 
 HamburgerMenuButton.propTypes = {
+    className: PropTypes.string,
     id: PropTypes.string,
     onClick: PropTypes.func
 }

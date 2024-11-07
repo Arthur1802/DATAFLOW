@@ -1,0 +1,113 @@
+.navbar.bg-light {
+    width: 100dvw;
+    background: var(--navbar-bg-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.navbar-brand {
+    color: var(--navbar-text-color);
+    font-size: 1.5rem;
+    margin-right: 10rem;
+}
+
+.navbar-nav {
+    width: 100%;
+    gap: 10%;
+}
+
+.navbar-nav:not(.navbar-footer) .nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.navbar-collapse:not(.show) .navbar-nav:not(.navbar-footer) .nav-item .nav-link {
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navbar .show .navbar-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar .show .navbar-nav .nav-item {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .show .nav-item .nav-link {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.navbar .show .nav-item .nav-link svg {
+    width: 20%;
+    margin: 0 10px 0 10px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #000;
+    transition: width 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav:not(.navbar-footer) .nav-item.active::after, .navbar-nav:not(.navbar-footer) .nav-item:hover::after {
+        width: 100%;
+    }
+}
+
+.navbar-nav.navbar-footer {
+    justify-content: flex-end;
+}
+
+.nav-item svg {
+    margin: 0;
+    padding: 0;
+    width: max-content;
+}
+
+.navbar-nav .btn {
+    width: max-content;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: none;
+}
+
+.nav-link {
+    color: var(--navbar-text-color);
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-nav .btn .btn-outline-secondary {
+    --bs-btn-hover-bg: #000;
+}

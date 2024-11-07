@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HamburgerMenuButton from './HamburgerMenuButton/HamburgerMenuButton.jsx'
+import HamburgerMenuButton from '../HamburgerMenuButton/HamburgerMenuButton.jsx'
 import './Sidebar.css'
 
 const Sidebar = () => {
