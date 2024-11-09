@@ -22,9 +22,15 @@
 <body>
   <div id="root"></div>
   <script>
-    AOS.init();
+    AOS.init()
+
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle = "tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: '#navbar',
+      smoothScroll: true
+    })
   </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>

@@ -1,0 +1,70 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.welcome-container .sections {
+    width: 100%;
+    height: 75dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container .sections:not(.home) {
+    border: 1px solid #ccc;
+}
+
+.welcome-container .sections.home {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
+.welcome-container .sections.home .home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+}
+
+.welcome-container .sections.home .home-text .home-title {
+    font-size: 5rem;
+    width: 100%;
+}
+
+.welcome-container .sections.home .home-text .home-btns {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-container .sections.home .home-text .home-btns .btn {
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    text-wrap: wrap;
+}
+
+.welcome-container .sections.home .home-img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container .sections.home .home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

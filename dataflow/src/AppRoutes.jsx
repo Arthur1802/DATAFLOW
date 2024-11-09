@@ -8,13 +8,11 @@ import Login from './pages/Login/Login'
 
 const AppRoutes = () => {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path = "/" element = {<Welcome />} />
-                <Route path = "/signin" element = {<Signin />} />
-                <Route path = "/login" element = {<Login />} />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path = "/" element = {<Welcome />} />
+            <Route path = "/signin" element = {<Signin />} />
+            <Route path = "/login" element = {<Login />} />
+        </Routes>
     )
 }
 
